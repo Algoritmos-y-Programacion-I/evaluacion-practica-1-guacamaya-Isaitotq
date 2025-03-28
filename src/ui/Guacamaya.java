@@ -129,6 +129,8 @@ public static void establecerCantidadVendida() {
  * Descripción: Este método solicita al usuario que ingrese el precio y la cantidad vendida para cada referencia de producto.
  * Precondición: Los arreglos 'precios' y 'unidades' deben estar inicializados y tener la misma longitud.
  * Poscondición: Los arreglos 'precios' y 'unidades' quedan llenos con la información ingresada por el usuario.
+ * @param el método no tiene parametros
+ * @return int total_unidades
  */
     }
 
@@ -145,6 +147,8 @@ public static void establecerCantidadVendida() {
  * Descripción: Este método calcula el total de ventas del día multiplicando el precio de cada producto por su cantidad vendida.
  * Precondición: Los arreglos 'precios' y 'unidades' deben estar inicializados y tener la misma longitud.
  * Poscondición: Retorna el total de ventas del día.
+ * @param el método no tiene parametros
+ * @return int suma_precios/precios.length;
  */
     }
 
@@ -173,7 +177,10 @@ public static void establecerCantidadVendida() {
  * Descripción: Este método cuenta cuántas referencias de productos han generado ventas por encima de un límite especificado.
  * Precondición: Los arreglos 'precios' y 'unidades' deben estar inicializados y contener datos válidos.
  * Poscondición: Retorna el número de referencias de productos cuyas ventas superan el límite ingresado.
+ * @param el metodo tiene double limite
+ * @return num_Productos 
  */
+
     public static int consultarReferenciasSobreLimite(double limite){
         int num_productos=0;
         for(int i=0;i<precios.length;i++){
