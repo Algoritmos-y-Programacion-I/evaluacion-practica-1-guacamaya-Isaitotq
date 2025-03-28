@@ -95,6 +95,7 @@ public class Guacamaya {
 
 // Establecemos cantida Vendida 
 
+
 public static void establecerCantidadVendida() {
 
         System.out.println("\nDigite el numero de referencias de producto diferentes vendidas en el dia ");
@@ -104,7 +105,16 @@ public static void establecerCantidadVendida() {
         unidades = new int[referencias];
 
     }
+
 // Solicitamos Datos al cliente :3
+/**
+ * Descripción: Este método solicita al usuario el número de referencias de productos diferentes vendidas en el día e 
+ * inicializa los arreglos encargados de almacenar precios y cantidades.
+ * Precondición: El Scanner reader debe estar inicializado.
+ * Precondición: Los arreglos precios y unidades deben estar declarados.
+ * Poscondición: Los arreglos precios y unidades quedan inicializados con el número de referencias ingresado.
+ */
+
     public static void solicitarDatos(){
         for(int i=0;i<precios.length;i++){
             System.out.println("Por favor digite el valor de la referecia "+(i+1)+":");
@@ -115,6 +125,11 @@ public static void establecerCantidadVendida() {
         }
 
 // Calculamos Total unidades Vendidas   
+/**
+ * Descripción: Este método solicita al usuario que ingrese el precio y la cantidad vendida para cada referencia de producto.
+ * Precondición: Los arreglos 'precios' y 'unidades' deben estar inicializados y tener la misma longitud.
+ * Poscondición: Los arreglos 'precios' y 'unidades' quedan llenos con la información ingresada por el usuario.
+ */
     }
 
     public static int calcularTotalUnidadesVendidas(){
@@ -126,6 +141,11 @@ public static void establecerCantidadVendida() {
 
         return total_unidades;
  // Calcular Precios promedio :v       
+ /**
+ * Descripción: Este método calcula el total de ventas del día multiplicando el precio de cada producto por su cantidad vendida.
+ * Precondición: Los arreglos 'precios' y 'unidades' deben estar inicializados y tener la misma longitud.
+ * Poscondición: Retorna el total de ventas del día.
+ */
     }
 
     public static double calcularPrecioPromedio(){
@@ -138,6 +158,7 @@ public static void establecerCantidadVendida() {
 
     }
 // Calcular ventas totales :D
+
     public static double calcularVentasTotales(){
         double total_ventas=0;
         for(int i=0;i<precios.length;i++){
@@ -148,6 +169,11 @@ public static void establecerCantidadVendida() {
 
     }
 // Consultamos :P
+/**
+ * Descripción: Este método cuenta cuántas referencias de productos han generado ventas por encima de un límite especificado.
+ * Precondición: Los arreglos 'precios' y 'unidades' deben estar inicializados y contener datos válidos.
+ * Poscondición: Retorna el número de referencias de productos cuyas ventas superan el límite ingresado.
+ */
     public static int consultarReferenciasSobreLimite(double limite){
         int num_productos=0;
         for(int i=0;i<precios.length;i++){
