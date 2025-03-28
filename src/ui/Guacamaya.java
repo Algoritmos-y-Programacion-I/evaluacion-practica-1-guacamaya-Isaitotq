@@ -92,7 +92,10 @@ public class Guacamaya {
      * pre: Los arreglos precios y unidades deben estar declarados
      * pos: Los arreglos precios y unidades quedan inicializados
      */
-    public static void establecerCantidadVendida() {
+
+// Establecemos cantida Vendida 
+
+public static void establecerCantidadVendida() {
 
         System.out.println("\nDigite el numero de referencias de producto diferentes vendidas en el dia ");
         int referencias = reader.nextInt();
@@ -101,37 +104,59 @@ public class Guacamaya {
         unidades = new int[referencias];
 
     }
-
+// Solicitamos Datos al cliente :3
     public static void solicitarDatos(){
+        for(int i=0;i<precios.length;i++){
+            System.out.println("Por favor digite el valor de la referecia "+(i+1)+":");
+            precios[i]=reader.nextDouble();
+            System.out.println("Por favor digite el numero de ventas de la referecia "+(i+1)+":");
+            unidades[i]=reader.nextInt();
 
-        
-     
+        }
+
+// Calculamos Total unidades Vendidas   
     }
 
     public static int calcularTotalUnidadesVendidas(){
+        int total_unidades=0;
+        for(int i =0;i<unidades.length;i++){
+            total_unidades += unidades[i];
+        }
 
-        return 0;
 
-
+        return total_unidades;
+ // Calcular Precios promedio :v       
     }
 
     public static double calcularPrecioPromedio(){
+        double suma_precios=0;
+        for(int i=0;i<precios.length;i++){
+            suma_precios += precios[i];
+        }
 
-        return 0;
-
+        return suma_precios/precios.length;
 
     }
-
+// Calcular ventas totales :D
     public static double calcularVentasTotales(){
+        double total_ventas=0;
+        for(int i=0;i<precios.length;i++){
+            total_ventas += precios[i]*unidades[i];
+        }
 
-        return 0;
-
+        return total_ventas;
 
     }
-
+// Consultamos :P
     public static int consultarReferenciasSobreLimite(double limite){
+        int num_productos=0;
+        for(int i=0;i<precios.length;i++){
+            if(precios[i]*unidades[i] > limite){
+                num_productos++;
+            }
+        }
 
-        return 0;
+        return num_productos;
 
     }
 
